@@ -7,8 +7,8 @@ Page({
    */
   data: {
     videoInfo:{},
-    needPay:true,
-    hasPay: true
+    needPay:false,
+    hasPay: false
   },
 
   /**
@@ -29,6 +29,14 @@ Page({
           that.setData({
             videoInfo: res.data.data.videoInfo
           });
+
+          let id = res.data.data.videoInfo.id;
+          if( id% 2===0){
+            that.setData({
+              needPay: true,
+              hasPay:false
+            });
+          }
 
         }
       }

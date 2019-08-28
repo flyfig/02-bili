@@ -15,7 +15,7 @@ background-color: rgba(102,102,102, 1);
 height: 70rpx;
 line-height: 70rpx;
 pointer-events: none;
-color:#fff;
+color:#000;
 display:inline-block;
 margin-left: calc(100% - 230rpx);
 margin-top: -60rpx;
@@ -23,6 +23,7 @@ margin-top: -60rpx;
 .pay_btn.pay{
   pointer-events: all;
   background-color: #FFC0CB;
+  color:#fff;
 }
 video{
   width: 100%;
