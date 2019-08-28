@@ -1,0 +1,18 @@
+<!--components/MyTitle/MyTitle.wxml-->
+<view class="my-title">
+  <navigator class="logo">
+    <image class="image-logo"    style="width:140rpx;height:60rpx;" src="../../icons/bilibili_logo.png"></image>
+  </navigator>
+  <view class="search-icon">
+    <image style="width:60rpx;height:60rpx;"  src="../../icons/search.png"></image>
+  </view>
+
+  <view class="user-icon">
+    <image style="width:54rpx;height:60rpx;" src="../../icons/unlogin.png"></image>
+  </view>
+
+  <view class="down-app">
+    下载APP
+  </view>
+</view>
+

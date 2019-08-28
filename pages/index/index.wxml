@@ -1,0 +1,59 @@
+<view class="main">
+  <!-- 公共头部 -->
+  <MyTitle>{{}}</MyTitle>
+
+<!-- 首页导航 -->
+<view class="nav_wrap">
+<!-- 自己滚动区域的组件 -->
+  <scroll-view class="nav" scroll-x>
+  <view bindtap="activeNav" data-index="{{index}}" class="nav_item {{index===currentIndexNav?'active':''}}" wx:for="{{navList}}" wx:key="{{index}}">
+  {{item.text}}
+  
+  </view>
+  </scroll-view>
+</view>
+
+<!-- 轮播图列表 -->
+<view class="slides">
+  <swiper autoplay indicator-dots circular>
+    <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
+      <navigator>
+      <image src="{{item.imgSrc}}"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 视频列表 -->
+
+<view class="video_warp">
+  <navigator url="../detail/detail?id={{item.id}}" class="video_item" wx:for="{{videoList}}" wx:key="{{index}}">
+    <!-- 图片 -->
+    <view class="video_img">
+      <image src="{{item.imgSrc}}" mode="aspectFit"></image>
+    </view>
+    <!-- 播放量 -->
+    <view class="video_info">
+      <view class="play_count_wrap">
+        <!-- 图标 -->
+        <text class="icons fa fa-play-circle-o"></text>
+        <!-- 数值 -->
+        <text class="play_count fa fa-play-circle-o">{{item.playCount}}</text>
+      </view>
+        <!-- 评论量 -->
+        <view class="comment_count">
+         <!-- 图标 -->
+        <text class="icons fa fa-commenting-o"></text>
+        <!-- 数值 -->
+        <text class="comment_count fa fa-play-circle-o">{{item.commentCount}}</text>
+        </view>
+    </view>
+  
+    <view class="video_title">{{item.desc}}</view>
+  </navigator>
+</view>
+  <view>
+    <!-- <video src="https://www.linpx.cn/usr/uploads/2019/02/972608515.mp4"></video> -->
+  </view>
+</view>
+
