@@ -6,7 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    videoInfo:{}
+    videoInfo:{},
+    needPay:true,
+    hasPay: true
   },
 
   /**
@@ -80,5 +82,22 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  //打开支付界面
+  openPay(e){
+    let timeStamp = new Date().getTime();
+    wx.requestPayment({
+      timeStamp: timeStamp.toString(),
+      nonceStr: 'wx000973c8f2ea68f8flyfig',
+      package: 'play_id=wx2017033010242291fcfe0db70013231072',
+      signType: 'MD5',
+      paySign: "9A0A8659F005D6984697E2CA0A9CF3B7",
+      'success': function (res) { 
+        console.log(res);
+      },
+      'fail': function (res) { 
+        console.log(res);
+      }
+    })
   }
 })
