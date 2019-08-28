@@ -6,14 +6,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    videoInfo:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if(options&& options.id){
+      this.getVideoInfo(options.id);
+    }
+  },
 
+  getVideoInfo(id){
+    let that = this;
+    wx.request({
+      url: "https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/videoDetail?id="+ id ,
+      success(res) {
+        if (res.data && res.data.code === 0) {
+          that.setData({
+            videoInfo: res.data.data.videoInfo
+          });
+
+        }
+      }
+    });
   },
 
   /**

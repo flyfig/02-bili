@@ -1,3 +1,28 @@
 <!--pages/detail/detail.wxml-->
 <MyTitle></MyTitle>
-<view>功能未实现</view>
+<view class="video_main">
+  <view class="video_wrap">
+    <video class="current_video" object-fit="fill" data-id="{{videoInfo.id}}" src="{{videoInfo.videoSrc}}"></video>
+  </view>
+  <view class="video_details">
+    <view class="author_info">
+    <text class="author">作者：{{videoInfo.author}}</text>
+    </view>
+    <view class="video_title">{{videoInfo.videoTitle}}</view>
+    <view class="play_info">
+      <text class="play_count">播放：{{videoInfo.playCount}}</text>
+      <text class="play_comment">留言：{{videoInfo.commentCount}}</text>
+    </view>
+  </view>
+
+</view>
+<!-- 
+{
+      "id": 1,
+      "videoSrc": "http://files.ak48.xyz/2018120195458.mp4",
+      "videoTitle": "世界上广告最多的网站判定！真的有10000条广告！【暗物质#2】",
+      "author": "牧草君1",
+      "playCount": "24.9万",
+      "commentCount": 1345,
+      "date": "12-15"
+    } -->

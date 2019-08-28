@@ -1,1 +1,23 @@
 /* pages/detail/detail.wxss */
+video{
+  width: 100%;
+}
+.video_details{
+  padding-top: 5rpx;
+  padding-left: 5rpx;
+  padding-right: 5rpx;
+  padding-bottom: 5rpx;
+}
+.author_info{
+  min-height: 60rpx;
+}
+.author{
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.play_count{
+  margin-right: 30prx;
+}
+.play_comment{
+ margin-right: 30prx;
+}

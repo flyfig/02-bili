@@ -8,7 +8,6 @@
   <scroll-view class="nav" scroll-x>
   <view bindtap="activeNav" data-index="{{index}}" class="nav_item {{index===currentIndexNav?'active':''}}" wx:for="{{navList}}" wx:key="{{index}}">
   {{item.text}}
-  
   </view>
   </scroll-view>
 </view>
@@ -30,7 +29,7 @@
   <navigator url="../detail/detail?id={{item.id}}" class="video_item" wx:for="{{videoList}}" wx:key="{{index}}">
     <!-- 图片 -->
     <view class="video_img">
-      <image src="{{item.imgSrc}}" mode="aspectFit"></image>
+      <image src="{{item.imgSrc}}" mode="widthFix"></image>
     </view>
     <!-- 播放量 -->
     <view class="video_info">
