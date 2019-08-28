@@ -1,3 +1,4 @@
+
 Page({
 
   /**
@@ -6,7 +7,16 @@ Page({
   data: {
     currentIndexNav:0,
     //首页导航数据
-    navList:[],
+    navList:[{
+      text:"首页",
+      id:0
+    },{
+      text:"视频",
+      id:1
+    },{
+      text:"文章",
+      id:2
+    }],
     //轮播图
     swiperList:[],
     //视频列表数据
@@ -65,12 +75,13 @@ Page({
       currentIndexNav:e.target.dataset.index
     });
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     //1.获取首页导航数据
-    this.getNavList();
+ //   this.getNavList();
 
     //2.获取轮播图
     this.getSiwperList();

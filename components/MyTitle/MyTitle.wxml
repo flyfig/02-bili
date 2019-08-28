@@ -8,7 +8,7 @@
   </view>
 
   <view class="user-icon">
-    <image style="width:54rpx;height:60rpx;" src="../../icons/unlogin.png"></image>
+    <image style="width:54rpx;height:60rpx;" src="{{userInfo.avatarUrl}}"></image>
   </view>
 
   <view class="down-app">

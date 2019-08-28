@@ -1,6 +1,6 @@
 <view class="main">
   <!-- 公共头部 -->
-  <MyTitle>{{}}</MyTitle>
+  <MyTitle id="MyTitle">{{}}</MyTitle>
 
 <!-- 首页导航 -->
 <view class="nav_wrap">
