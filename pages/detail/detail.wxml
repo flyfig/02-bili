@@ -2,14 +2,14 @@
 <MyTitle></MyTitle>
 <view class="video_main">
   <view class="video_wrap">
-    <video class="current_video {{needPay?'need_pay':''}}" object-fit="fill" data-id="{{videoInfo.id}}" src="https://www.w3school.com.cn/example/html5/mov_bbb.mp4" show-fullscreen-btn title="{{videoInfo.videoTitle}}"> <view wx:if="{{needPay}}" class="check_pay {{hasPay?'tips_play':''}}">视频需要购买</view></video>
+    <video class="current_video {{needPay?'need_pay':''}}" object-fit="fill" data-id="{{videoInfo.id}}" src="https://www.w3school.com.cn/example/html5/mov_bbb.mp4" show-fullscreen-btn title="{{videoInfo.videoTitle}}"></video>
    
   </view>
   <view class="video_details">
     <view class="author_info">
     <text class="author">作者：{{videoInfo.author}}</text>
-    <button class="pay_btn {{needPay &&!hasPlay? 'pay':''}}" 
-    bindtap="openPay">购买视频</button>
+    <view class="pay_btn {{needPay &&!hasPlay? 'pay':''}}" 
+    bindtap="openPay">购买视频</view>
     </view>
     <view class="video_title">{{videoInfo.videoTitle}}</view>
     <view class="play_info">
